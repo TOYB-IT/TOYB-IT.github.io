@@ -2,7 +2,78 @@
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
 <BaseLayout title="Update in progress" description="Update in progress">
-	<Hero title="Update in progress" tagline="Not found" />
-</BaseLayout>
+	<Hero title="Contact " tagline="Merci de nous avoir contactés ! Votre message est important pour nous." />
+	<style>
+		/* Styles pour le formulaire de contact */
+		.contact-form {
+		  max-width: 500px;
+		  margin: 0 auto;
+		  padding: 50px;
+		  border-radius: 60px;
+		  background-color: #2e2d53;
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+	  
+		.contact-form input[type="text"],
+		.contact-form input[type="email"],
+		.contact-form textarea {
+		  width: 100%;
+		  padding: 10px;
+		  margin-bottom: 15px;
+		  border: 1px solid #ccc;
+		  border-radius: 5px;
+		  box-sizing: border-box; /* Ajuste la taille de la zone de saisie incluant le padding et la bordure */
+		  font-size: 16px;
+		}
+	  
+		.contact-form textarea {
+		  height: 150px;
+		}
+	  
+		.contact-form input[type="submit"] {
+		  background-color: #061320;
+		  color: #ffffff25;
+		  border: none;
+		  padding: 12px 20px;
+		  border-radius: 50px;
+		  cursor: pointer;
+		  font-size: auto;
+		}
+	  
+		.contact-form input[type="submit"]:hover {
+		  background-color: #021b36;
+		}
+	  
+		.contact-form input[type="submit"]:focus {
+		  outline: none;
+		}
+	  
+		.contact-form label {
+		  font-size: 20px;
+		}
+	  
+		.contact-form h2 {
+		  text-align: center;
+		  margin-bottom: 20px;
+		  font-size: 20px;
+		}
+	  </style>
+	  
+	  <div class="contact-form">
+		<h2></h2>
+		<form action="mailto:votre_email@exemple.com" method="post" enctype="text/plain">
+		  <label for="name">Your Name:</label>
+		  <input type="text" id="name" name="name" placeholder="Enter your name">
+	  
+		  <label for="email">Your Email:</label>
+		  <input type="email" id="email" name="email" placeholder="Enter your email">
+	  
+		  <label for="message">Your Message:</label>
+		  <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+	  
+		  <input type="hidden" name="recipient" value="toybngazi92@gmail.com">
+		  <input type="submit" value="Send Message">
+		</form>
+	  </div>
+	  
